@@ -13,8 +13,18 @@ public class ComplexUtils {
 	 */
 	public String areSameName(String firstName, String secondName) {
 		String message = "";
-		
+	
 		//TODO: implement here
+		if (firstName == secondName){
+		    message = "Same name";
+		}
+		else if (firstName.charAt(0) == secondName.charAt(0)){
+		    message = "Same first letter";
+		}
+		else {
+		    message = "No match";
+		}
+		
 
 		return message;
 	}
@@ -32,6 +42,15 @@ public class ComplexUtils {
 		boolean leapYear = false;
 
 		//TODO: implement here
+		if (year % 400 == 0) {
+		    leapYear = true;
+		}
+		else if (year % 100 == 0) {
+		    leapYear = false;
+		}
+		else if (year % 4 == 0) {
+		    leapYear = true;
+		}
 
 		return leapYear;
 	}
@@ -65,9 +84,21 @@ public class ComplexUtils {
 	 */
 	public boolean isPrime(int num) {
 		//TODO: implement here
-
-		return true;
-	}
+        boolean prime = true;
+        if(num <= 1) {
+            prime = false;
+            return prime;
+        }
+        else {
+            for (int i = 2; i <= num/2; i++) {
+                if (num % i == 0) {
+                    prime = false;
+                    break;
+                }
+            }
+            return prime;
+        }
+    }
 
 	/**
 	 * Q5. Determine if the given string is a palindrome (case folded).
@@ -95,6 +126,11 @@ public class ComplexUtils {
 		String primesStr = "";
 
 		//TODO: implement here
+		for (int i = 1; i <= num; i++){
+		    if (isPrime(i) == true){
+		        primesStr = primesStr + i + " ";
+		    }
+		}
 		return primesStr;
 	}
 }

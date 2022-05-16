@@ -18,8 +18,7 @@ public class BooleanExpression {
 
         boolean expression = false;
 
-        // TODO Check whether userResponse is 'y' or 'Y'.
-        // expression = ...
+        expression = userResponse =='Y' || userResponse == 'y' ; 
 
         return expression;
     }
@@ -35,8 +34,7 @@ public class BooleanExpression {
 
         boolean expression = false;
 
-        // TODO Check whether "amount" is odd.
-        // expression = ...
+       if(amount%2!=0) { expression = true; }
 
         return expression;
     }
@@ -49,13 +47,10 @@ public class BooleanExpression {
      * @return true if the name starts with 'A', false otherwise.
      */
     public boolean startsWithA(String firstName) {
-
         boolean expression = false;
-
-        // TODO Check whether firstName starts with 'A' (or 'a').
-        // expression = ...
-
-        return expression;
+         
+        expression = firstName.startsWith("A") || firstName.startsWith("a");
+         return expression;
     }
 
     /**
@@ -69,8 +64,7 @@ public class BooleanExpression {
 
         boolean expression = false;
 
-        // TODO Check whether the given singer is Taylor Swift.
-        // expression = ...
+       expression = singer.matches("Taylor Swift");
 
         return expression;
     }
@@ -86,8 +80,7 @@ public class BooleanExpression {
 
         boolean expression = false;
 
-        // TODO Check whether the given year meets the stated requirements
-        // expression = ...
+        if(yearBorn>1978 && yearBorn!=2013) { expression = true;}
 
         return expression;
     }

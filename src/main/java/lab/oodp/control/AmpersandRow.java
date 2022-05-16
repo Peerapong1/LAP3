@@ -10,11 +10,14 @@ public class AmpersandRow {
      *
      * @param howMany the number of ampersands to print.
      */
-    public void printRowOfAmpersandsWithFor(int howMany) {
+    public void printRowOfAmpersandsWithFor(int howMany) {for(int i=0;i<howMany;i++) {
+    	System.out.print("&");
+    }
     	
     }
     
-    public void printRowOfAmpersandsWithWhile(int howMany) {
-    	
+    public void printRowOfAmpersandsWithWhile(int howMany) { int i =0;
+    while (i< howMany) { System.out.print("&"); i++;
+    }
     }
 }
